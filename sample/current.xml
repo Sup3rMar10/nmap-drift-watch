@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX current.xml 192.168.56.0/24" start="1791600000">
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.10" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="8.9"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="nginx" version="1.24"/></port>
+      <port protocol="tcp" portid="6379"><state state="open"/><service name="redis" product="Redis key-value store" version="7.0.5"/></port>
+      <port protocol="tcp" portid="8080"><state state="open"/><service name="http-proxy"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.11" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="9.6"/></port>
+      <port protocol="tcp" portid="443"><state state="closed"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.168.56.50" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="23"><state state="open"/><service name="telnet"/></port>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="lighttpd" version="1.4.55"/></port>
+    </ports>
+  </host>
+</nmaprun>
